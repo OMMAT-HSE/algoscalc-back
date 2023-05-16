@@ -1,7 +1,0 @@
-src.core.algorithm\_builder module
-==================================
-
-.. automodule:: src.core.algorithm_builder
-   :members:
-   :undoc-members:
-   :show-inheritance:
