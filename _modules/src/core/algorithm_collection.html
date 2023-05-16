@@ -73,10 +73,10 @@
 
 <span class="kn">from</span> <span class="nn">src.core.algorithm</span> <span class="kn">import</span> <span class="n">Algorithm</span>
 <span class="kn">from</span> <span class="nn">src.core.algorithm_builder</span> <span class="kn">import</span> <span class="n">AlgorithmBuilder</span>
-<span class="kn">from</span> <span class="nn">src.core.constants</span> <span class="kn">import</span> <span class="n">NO_ALGORITHMS_MSG</span><span class="p">,</span> <span class="n">ALGORITHM_NOT_EXISTS_TEMPL</span>
+<span class="kn">from</span> <span class="nn">src.core</span> <span class="kn">import</span> <span class="n">NO_ALGORITHMS_MSG</span><span class="p">,</span> <span class="n">ALGORITHM_NOT_EXISTS_TEMPL</span>
 
 
-<div class="viewcode-block" id="AlgorithmCollection"><a class="viewcode-back" href="../../../src.core.html#src.core.algorithm_collection.AlgorithmCollection">[документация]</a><span class="k">class</span> <span class="nc">AlgorithmCollection</span><span class="p">:</span>
+<div class="viewcode-block" id="AlgorithmCollection"><a class="viewcode-back" href="../../../src.core.algorithm_collection.html#src.core.algorithm_collection.AlgorithmCollection">[документация]</a><span class="k">class</span> <span class="nc">AlgorithmCollection</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Класс представляет собой набор объектов класса Algorithm,</span>
 <span class="sd">    созданных объектом класса AlgorithmBuilder.</span>
 
@@ -108,7 +108,7 @@
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__algorithms</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">NO_ALGORITHMS_MSG</span><span class="p">)</span>
 
-<div class="viewcode-block" id="AlgorithmCollection.has_algorithm"><a class="viewcode-back" href="../../../src.core.html#src.core.algorithm_collection.AlgorithmCollection.has_algorithm">[документация]</a>    <span class="k">def</span> <span class="nf">has_algorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">algorithm_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<div class="viewcode-block" id="AlgorithmCollection.has_algorithm"><a class="viewcode-back" href="../../../src.core.algorithm_collection.html#src.core.algorithm_collection.AlgorithmCollection.has_algorithm">[документация]</a>    <span class="k">def</span> <span class="nf">has_algorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">algorithm_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Проверяет наличие алгоритма с указанным именем.</span>
 
 <span class="sd">        :param algorithm_name: имя алгоритма;</span>
@@ -118,7 +118,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">algorithm_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__algorithms</span></div>
 
-<div class="viewcode-block" id="AlgorithmCollection.get_name_title_dict"><a class="viewcode-back" href="../../../src.core.html#src.core.algorithm_collection.AlgorithmCollection.get_name_title_dict">[документация]</a>    <span class="k">def</span> <span class="nf">get_name_title_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+<div class="viewcode-block" id="AlgorithmCollection.get_name_title_dict"><a class="viewcode-back" href="../../../src.core.algorithm_collection.html#src.core.algorithm_collection.AlgorithmCollection.get_name_title_dict">[документация]</a>    <span class="k">def</span> <span class="nf">get_name_title_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Возвращает словарь с уникальными именами алгоритмов в качестве</span>
 <span class="sd">        ключей и названиями алгоритмов в качестве значений.</span>
 
@@ -127,7 +127,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">alg</span><span class="o">.</span><span class="n">title</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">alg</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__algorithms</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span></div>
 
-<div class="viewcode-block" id="AlgorithmCollection.get_algorithm"><a class="viewcode-back" href="../../../src.core.html#src.core.algorithm_collection.AlgorithmCollection.get_algorithm">[документация]</a>    <span class="k">def</span> <span class="nf">get_algorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">algorithm_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Algorithm</span><span class="p">:</span>
+<div class="viewcode-block" id="AlgorithmCollection.get_algorithm"><a class="viewcode-back" href="../../../src.core.algorithm_collection.html#src.core.algorithm_collection.AlgorithmCollection.get_algorithm">[документация]</a>    <span class="k">def</span> <span class="nf">get_algorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">algorithm_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Algorithm</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Возвращает объект класса Algorithm с указанным именем.</span>
 
 <span class="sd">        :param algorithm_name: имя алгоритма;</span>
@@ -140,7 +140,7 @@
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">ALGORITHM_NOT_EXISTS_TEMPL</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">algorithm_name</span><span class="p">))</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__algorithms</span><span class="p">[</span><span class="n">algorithm_name</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="AlgorithmCollection.get_algorithm_result"><a class="viewcode-back" href="../../../src.core.html#src.core.algorithm_collection.AlgorithmCollection.get_algorithm_result">[документация]</a>    <span class="k">def</span> <span class="nf">get_algorithm_result</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">algorithm_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+<div class="viewcode-block" id="AlgorithmCollection.get_algorithm_result"><a class="viewcode-back" href="../../../src.core.algorithm_collection.html#src.core.algorithm_collection.AlgorithmCollection.get_algorithm_result">[документация]</a>    <span class="k">def</span> <span class="nf">get_algorithm_result</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">algorithm_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                              <span class="n">params</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Возвращает результат выполнения алгоритма с указанным именем.</span>
 

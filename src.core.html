@@ -50,7 +50,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="src.html#submodules">Submodules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="src.html#module-src.api_models">src.api_models module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="src.html#module-src.constants">src.constants module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.html#src-constants-module">src.constants module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="src.html#module-src.main">src.main module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="src.html#module-src">Module contents</a></li>
 </ul>
@@ -122,12 +122,12 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="src.core.algorithm.Algorithm.add_output">
-<span class="sig-name descname"><span class="pre">add_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#src.core.data_element.DataElement" title="src.core.data_element.DataElement"><span class="pre">DataElement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.core.algorithm.Algorithm.add_output" title="Ссылка на это определение"></a></dt>
+<span class="sig-name descname"><span class="pre">add_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="src.core.data_element.html#src.core.data_element.DataElement" title="src.core.data_element.DataElement"><span class="pre">DataElement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.core.algorithm.Algorithm.add_output" title="Ссылка на это определение"></a></dt>
 <dd><p>Добавляет в описание выходных данных алгоритма,  элемент
 переданный в параметре output</p>
 <dl class="field-list simple">
 <dt class="field-odd">Параметры<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>output</strong> (<a class="reference internal" href="#src.core.data_element.DataElement" title="src.core.data_element.DataElement"><em>DataElement</em></a>) – элемент выходных данных.</p>
+<dd class="field-odd"><p><strong>output</strong> (<a class="reference internal" href="src.core.data_element.html#src.core.data_element.DataElement" title="src.core.data_element.DataElement"><em>DataElement</em></a>) – элемент выходных данных.</p>
 </dd>
 <dt class="field-even">Результат<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -144,12 +144,12 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="src.core.algorithm.Algorithm.add_parameter">
-<span class="sig-name descname"><span class="pre">add_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#src.core.data_element.DataElement" title="src.core.data_element.DataElement"><span class="pre">DataElement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.core.algorithm.Algorithm.add_parameter" title="Ссылка на это определение"></a></dt>
+<span class="sig-name descname"><span class="pre">add_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="src.core.data_element.html#src.core.data_element.DataElement" title="src.core.data_element.DataElement"><span class="pre">DataElement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.core.algorithm.Algorithm.add_parameter" title="Ссылка на это определение"></a></dt>
 <dd><p>Добавляет в описание входных данных алгоритма, элемент
 переданный в параметре parameter</p>
 <dl class="field-list simple">
 <dt class="field-odd">Параметры<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>parameter</strong> (<a class="reference internal" href="#src.core.data_element.DataElement" title="src.core.data_element.DataElement"><em>DataElement</em></a>) – элемент входных данных.</p>
+<dd class="field-odd"><p><strong>parameter</strong> (<a class="reference internal" href="src.core.data_element.html#src.core.data_element.DataElement" title="src.core.data_element.DataElement"><em>DataElement</em></a>) – элемент входных данных.</p>
 </dd>
 <dt class="field-even">Результат<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -255,28 +255,28 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="src.core.algorithm.Algorithm.outputs">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">outputs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#src.core.data_element.DataElement" title="src.core.data_element.DataElement"><span class="pre">src.core.data_element.DataElement</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#src.core.algorithm.Algorithm.outputs" title="Ссылка на это определение"></a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">outputs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="src.core.data_element.html#src.core.data_element.DataElement" title="src.core.data_element.DataElement"><span class="pre">src.core.data_element.DataElement</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#src.core.algorithm.Algorithm.outputs" title="Ссылка на это определение"></a></dt>
 <dd><p>Возвращает описание выходных данных алгоритма.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Результат<span class="colon">:</span></dt>
 <dd class="field-odd"><p>описание выходных данных алгоритма.</p>
 </dd>
 <dt class="field-even">Тип результата<span class="colon">:</span></dt>
-<dd class="field-even"><p>tuple[<a class="reference internal" href="#src.core.data_element.DataElement" title="src.core.data_element.DataElement">DataElement</a>]</p>
+<dd class="field-even"><p>tuple[<a class="reference internal" href="src.core.data_element.html#src.core.data_element.DataElement" title="src.core.data_element.DataElement">DataElement</a>]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="src.core.algorithm.Algorithm.parameters">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#src.core.data_element.DataElement" title="src.core.data_element.DataElement"><span class="pre">src.core.data_element.DataElement</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#src.core.algorithm.Algorithm.parameters" title="Ссылка на это определение"></a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="src.core.data_element.html#src.core.data_element.DataElement" title="src.core.data_element.DataElement"><span class="pre">src.core.data_element.DataElement</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#src.core.algorithm.Algorithm.parameters" title="Ссылка на это определение"></a></dt>
 <dd><p>Возвращает описание входных данных алгоритма.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Результат<span class="colon">:</span></dt>
 <dd class="field-odd"><p>описание входных данных алгоритма.</p>
 </dd>
 <dt class="field-even">Тип результата<span class="colon">:</span></dt>
-<dd class="field-even"><p>tuple[<a class="reference internal" href="#src.core.data_element.DataElement" title="src.core.data_element.DataElement">DataElement</a>]</p>
+<dd class="field-even"><p>tuple[<a class="reference internal" href="src.core.data_element.html#src.core.data_element.DataElement" title="src.core.data_element.DataElement">DataElement</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -352,7 +352,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="src.core.algorithm_builder.AlgorithmBuilder.build_algorithm">
-<span class="sig-name descname"><span class="pre">build_algorithm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#src.core.algorithm.Algorithm" title="src.core.algorithm.Algorithm"><span class="pre">Algorithm</span></a></span></span><a class="headerlink" href="#src.core.algorithm_builder.AlgorithmBuilder.build_algorithm" title="Ссылка на это определение"></a></dt>
+<span class="sig-name descname"><span class="pre">build_algorithm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="src.core.algorithm.html#src.core.algorithm.Algorithm" title="src.core.algorithm.Algorithm"><span class="pre">Algorithm</span></a></span></span><a class="headerlink" href="#src.core.algorithm_builder.AlgorithmBuilder.build_algorithm" title="Ссылка на это определение"></a></dt>
 <dd><p>Создает экземпляр класса Algorithm на основе файлов с исходным
 кодом, расположенных в указанном каталоге.</p>
 <dl class="field-list simple">
@@ -363,7 +363,7 @@
 <dd class="field-even"><p>экземпляр класса Algorithm;</p>
 </dd>
 <dt class="field-odd">Тип результата<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#src.core.algorithm.Algorithm" title="src.core.algorithm.Algorithm">Algorithm</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="src.core.algorithm.html#src.core.algorithm.Algorithm" title="src.core.algorithm.Algorithm">Algorithm</a></p>
 </dd>
 <dt class="field-even">Исключение<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
@@ -389,7 +389,7 @@ JSON Schema;</p></li>
 созданных объектом класса AlgorithmBuilder.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="src.core.algorithm_collection.AlgorithmCollection.get_algorithm">
-<span class="sig-name descname"><span class="pre">get_algorithm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">algorithm_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#src.core.algorithm.Algorithm" title="src.core.algorithm.Algorithm"><span class="pre">Algorithm</span></a></span></span><a class="reference internal" href="_modules/src/core/algorithm_collection.html#AlgorithmCollection.get_algorithm"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#src.core.algorithm_collection.AlgorithmCollection.get_algorithm" title="Ссылка на это определение"></a></dt>
+<span class="sig-name descname"><span class="pre">get_algorithm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">algorithm_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="src.core.algorithm.html#src.core.algorithm.Algorithm" title="src.core.algorithm.Algorithm"><span class="pre">Algorithm</span></a></span></span><a class="reference internal" href="_modules/src/core/algorithm_collection.html#AlgorithmCollection.get_algorithm"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#src.core.algorithm_collection.AlgorithmCollection.get_algorithm" title="Ссылка на это определение"></a></dt>
 <dd><p>Возвращает объект класса Algorithm с указанным именем.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Параметры<span class="colon">:</span></dt>
@@ -399,7 +399,7 @@ JSON Schema;</p></li>
 <dd class="field-even"><p>объект класса Algorithm</p>
 </dd>
 <dt class="field-odd">Тип результата<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#src.core.algorithm.Algorithm" title="src.core.algorithm.Algorithm">Algorithm</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="src.core.algorithm.html#src.core.algorithm.Algorithm" title="src.core.algorithm.Algorithm">Algorithm</a></p>
 </dd>
 <dt class="field-even">Исключение<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>ValueError</strong> – если алгоритм с указанным именем отсутствует;</p>
@@ -425,7 +425,7 @@ JSON Schema;</p></li>
 выходных данных, значения - рассчитанные значения выходных данных.</p>
 </dd>
 <dt class="field-odd">Тип результата<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#src.core.algorithm.Algorithm" title="src.core.algorithm.Algorithm">Algorithm</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="src.core.algorithm.html#src.core.algorithm.Algorithm" title="src.core.algorithm.Algorithm">Algorithm</a></p>
 </dd>
 <dt class="field-even">Исключение<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
@@ -479,33 +479,33 @@ JSON Schema;</p></li>
 <span id="src-core-data-element-module"></span><h2>src.core.data_element module<a class="headerlink" href="#module-src.core.data_element" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="src.core.data_element.DataElement">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.core.data_element.</span></span><span class="sig-name descname"><span class="pre">DataElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#src.core.data_element.DataType" title="src.core.data_element.DataType"><span class="pre">DataType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_shape</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#src.core.data_element.DataShape" title="src.core.data_element.DataShape"><span class="pre">DataShape</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/core/data_element.html#DataElement"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#src.core.data_element.DataElement" title="Ссылка на это определение"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.core.data_element.</span></span><span class="sig-name descname"><span class="pre">DataElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="src.core.data_element.html#src.core.data_element.DataType" title="src.core.data_element.DataType"><span class="pre">DataType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_shape</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="src.core.data_element.html#src.core.data_element.DataShape" title="src.core.data_element.DataShape"><span class="pre">DataShape</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/core/data_element.html#DataElement"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#src.core.data_element.DataElement" title="Ссылка на это определение"></a></dt>
 <dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Класс представляет элемент входных или выходных данных для алгоритма.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="src.core.data_element.DataElement.data_shape">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data_shape</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#src.core.data_element.DataShape" title="src.core.data_element.DataShape"><span class="pre">DataShape</span></a></em><a class="headerlink" href="#src.core.data_element.DataElement.data_shape" title="Ссылка на это определение"></a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data_shape</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="src.core.data_element.html#src.core.data_element.DataShape" title="src.core.data_element.DataShape"><span class="pre">DataShape</span></a></em><a class="headerlink" href="#src.core.data_element.DataElement.data_shape" title="Ссылка на это определение"></a></dt>
 <dd><p>Возвращает размерность данных элемента.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Результат<span class="colon">:</span></dt>
 <dd class="field-odd"><p>размерность данных элемента.</p>
 </dd>
 <dt class="field-even">Тип результата<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#src.core.data_element.DataShape" title="src.core.data_element.DataShape">DataShape</a></p>
+<dd class="field-even"><p><a class="reference internal" href="src.core.data_element.html#src.core.data_element.DataShape" title="src.core.data_element.DataShape">DataShape</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="src.core.data_element.DataElement.data_type">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#src.core.data_element.DataType" title="src.core.data_element.DataType"><span class="pre">DataType</span></a></em><a class="headerlink" href="#src.core.data_element.DataElement.data_type" title="Ссылка на это определение"></a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="src.core.data_element.html#src.core.data_element.DataType" title="src.core.data_element.DataType"><span class="pre">DataType</span></a></em><a class="headerlink" href="#src.core.data_element.DataElement.data_type" title="Ссылка на это определение"></a></dt>
 <dd><p>Возвращает тип данных элемента.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Результат<span class="colon">:</span></dt>
 <dd class="field-odd"><p>тип данных элемента.</p>
 </dd>
 <dt class="field-even">Тип результата<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#src.core.data_element.DataType" title="src.core.data_element.DataType">DataType</a></p>
+<dd class="field-even"><p><a class="reference internal" href="src.core.data_element.html#src.core.data_element.DataType" title="src.core.data_element.DataType">DataType</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -672,7 +672,7 @@ int, float, str, bool.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="src.core.data_element.DataType.types">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">types</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list[&lt;property</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f6cbe1ee9f0&gt;]</span></span></span><a class="reference internal" href="_modules/src/core/data_element.html#DataType.types"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#src.core.data_element.DataType.types" title="Ссылка на это определение"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">types</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list[&lt;property</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f2e8e2a6f40&gt;]</span></span></span><a class="reference internal" href="_modules/src/core/data_element.html#DataType.types"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#src.core.data_element.DataType.types" title="Ссылка на это определение"></a></dt>
 <dd><p>Возвращает список допустимых типов данных.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Результат<span class="colon">:</span></dt>
@@ -697,6 +697,222 @@ int, float, str, bool.</p>
 исходного кода, написанного студентами, класс AlgorithmCollection,
 представляющий набор алгоритмов и реализующий функциональность для
 выполнения запросов к API онлайн-калькулятора.</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.ADDING_METHOD_FAILED_TEMPL">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">ADDING_METHOD_FAILED_TEMPL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'В</span> <span class="pre">процессе</span> <span class="pre">добавления</span> <span class="pre">метода</span> <span class="pre">произошла</span> <span class="pre">ошибка:</span> <span class="pre">{0}'</span></em><a class="headerlink" href="#src.core.ADDING_METHOD_FAILED_TEMPL" title="Ссылка на это определение"></a></dt>
+<dd><p>Шаблон сообщения об ошибке добавления метода</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.ALGORITHM_NOT_EXISTS_TEMPL">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">ALGORITHM_NOT_EXISTS_TEMPL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Алгоритм</span> <span class="pre">с</span> <span class="pre">именем</span> <span class="pre">&quot;{0}&quot;</span> <span class="pre">не</span> <span class="pre">существует'</span></em><a class="headerlink" href="#src.core.ALGORITHM_NOT_EXISTS_TEMPL" title="Ссылка на это определение"></a></dt>
+<dd><p>Шаблон сообщения об ошибке - алгоритм не существует</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.DEFAULT_TIMEOUT">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">DEFAULT_TIMEOUT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#src.core.DEFAULT_TIMEOUT" title="Ссылка на это определение"></a></dt>
+<dd><p>Время на выполнение алгоритма, заданное по умолчанию.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.EMPTY_STRING_PARAM_TEMPL">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">EMPTY_STRING_PARAM_TEMPL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Параметр</span> <span class="pre">&quot;{0}&quot;</span> <span class="pre">пуст'</span></em><a class="headerlink" href="#src.core.EMPTY_STRING_PARAM_TEMPL" title="Ссылка на это определение"></a></dt>
+<dd><p>Шаблон сообщения об ошибке - параметр пуст</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.EXECUTION_FAILED_TEMPL">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">EXECUTION_FAILED_TEMPL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Во</span> <span class="pre">время</span> <span class="pre">выполнения</span> <span class="pre">алгоритма</span> <span class="pre">произошла</span> <span class="pre">ошибка:</span> <span class="pre">{0}.</span> <span class="pre">Входные</span> <span class="pre">данные:</span> <span class="pre">{1}'</span></em><a class="headerlink" href="#src.core.EXECUTION_FAILED_TEMPL" title="Ссылка на это определение"></a></dt>
+<dd><p>Шаблон сообщения об ошибке выполнения</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.METHOD_NOT_CALL_MSG">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">METHOD_NOT_CALL_MSG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Объект,</span> <span class="pre">переданный</span> <span class="pre">в</span> <span class="pre">качестве</span> <span class="pre">метода,</span> <span class="pre">не</span> <span class="pre">является</span> <span class="pre">вызываемым'</span></em><a class="headerlink" href="#src.core.METHOD_NOT_CALL_MSG" title="Ссылка на это определение"></a></dt>
+<dd><p>Текст сообщения об ошибке - метод не вызываемый</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.MISMATCH_LIST_VALUE_TYPE_TEMPL">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">MISMATCH_LIST_VALUE_TYPE_TEMPL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Тип</span> <span class="pre">данных</span> <span class="pre">элемента</span> <span class="pre">списка</span> <span class="pre">с</span> <span class="pre">индексом</span> <span class="pre">{0}</span> <span class="pre">не</span> <span class="pre">соответствует</span> <span class="pre">типу</span> <span class="pre">{1}'</span></em><a class="headerlink" href="#src.core.MISMATCH_LIST_VALUE_TYPE_TEMPL" title="Ссылка на это определение"></a></dt>
+<dd><p>Шаблон сообщения об ошибке - не верный тип данных в списке</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.MISMATCH_MATRIX_VALUE_TYPE_TEMPL">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">MISMATCH_MATRIX_VALUE_TYPE_TEMPL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Тип</span> <span class="pre">данных</span> <span class="pre">элемента</span> <span class="pre">с</span> <span class="pre">индексом</span> <span class="pre">{0}</span> <span class="pre">в</span> <span class="pre">строке</span> <span class="pre">матрицы</span> <span class="pre">с</span> <span class="pre">индексом</span> <span class="pre">{1}</span> <span class="pre">не</span> <span class="pre">соответствует</span> <span class="pre">типу</span> <span class="pre">{2}'</span></em><a class="headerlink" href="#src.core.MISMATCH_MATRIX_VALUE_TYPE_TEMPL" title="Ссылка на это определение"></a></dt>
+<dd><p>Шаблон сообщения об ошибке - не верный тип данных в матрице</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.MISMATCH_VALUE_TYPE_TEMPL">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">MISMATCH_VALUE_TYPE_TEMPL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Тип</span> <span class="pre">данных</span> <span class="pre">для</span> <span class="pre">значения</span> <span class="pre">не</span> <span class="pre">соответствует</span> <span class="pre">типу</span> <span class="pre">{0}'</span></em><a class="headerlink" href="#src.core.MISMATCH_VALUE_TYPE_TEMPL" title="Ссылка на это определение"></a></dt>
+<dd><p>Шаблон сообщения об ошибке - не верный тип данных</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.MISSED_OUTPUT_TEMPL">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">MISSED_OUTPUT_TEMPL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Алгоритм</span> <span class="pre">не</span> <span class="pre">вернул</span> <span class="pre">значение</span> <span class="pre">для</span> <span class="pre">элемента</span> <span class="pre">выходных</span> <span class="pre">данных</span> <span class="pre">&quot;{0}'</span></em><a class="headerlink" href="#src.core.MISSED_OUTPUT_TEMPL" title="Ссылка на это определение"></a></dt>
+<dd><p>Шаблон сообщения об ошибке - отсутствует элемент выходных данных</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.MISSED_PARAMETER_TEMPL">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">MISSED_PARAMETER_TEMPL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Не</span> <span class="pre">указано</span> <span class="pre">значение</span> <span class="pre">для</span> <span class="pre">элемента</span> <span class="pre">входных</span> <span class="pre">данных</span> <span class="pre">&quot;{0}&quot;'</span></em><a class="headerlink" href="#src.core.MISSED_PARAMETER_TEMPL" title="Ссылка на это определение"></a></dt>
+<dd><p>Шаблон сообщения об ошибке - отсутствует элемент входных данных</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.NEG_INT_TIMEOUT_MSG">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">NEG_INT_TIMEOUT_MSG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Значение</span> <span class="pre">параметра</span> <span class="pre">execute_timeout</span> <span class="pre">меньше</span> <span class="pre">нуля'</span></em><a class="headerlink" href="#src.core.NEG_INT_TIMEOUT_MSG" title="Ссылка на это определение"></a></dt>
+<dd><p>Текст сообщения об ошибке - параметр меньше 0</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.NONE_VALUE_MSG">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">NONE_VALUE_MSG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Значение</span> <span class="pre">отсутствует</span> <span class="pre">(тип</span> <span class="pre">None)'</span></em><a class="headerlink" href="#src.core.NONE_VALUE_MSG" title="Ссылка на это определение"></a></dt>
+<dd><p>Текст сообщения об ошибке - параметр None</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.NON_INT_TIMEOUT_MSG">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">NON_INT_TIMEOUT_MSG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Параметр</span> <span class="pre">execute_timeout</span> <span class="pre">не</span> <span class="pre">является</span> <span class="pre">целым</span> <span class="pre">числом'</span></em><a class="headerlink" href="#src.core.NON_INT_TIMEOUT_MSG" title="Ссылка на это определение"></a></dt>
+<dd><p>Текст сообщения об ошибке - параметр не целое</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.NON_STRING_PARAM_TEMPL">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">NON_STRING_PARAM_TEMPL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Параметр</span> <span class="pre">&quot;{0}&quot;</span> <span class="pre">не</span> <span class="pre">является</span> <span class="pre">строкой'</span></em><a class="headerlink" href="#src.core.NON_STRING_PARAM_TEMPL" title="Ссылка на это определение"></a></dt>
+<dd><p>Шаблон сообщения об ошибке - параметр не строка</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.NOT_DATA_SHAPE_MSG">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">NOT_DATA_SHAPE_MSG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Параметр</span> <span class="pre">data_shape</span> <span class="pre">не</span> <span class="pre">является</span> <span class="pre">экземпляром</span> <span class="pre">DataShape'</span></em><a class="headerlink" href="#src.core.NOT_DATA_SHAPE_MSG" title="Ссылка на это определение"></a></dt>
+<dd><p>Текст сообщения об ошибке - параметр не DataShape</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.NOT_DATA_TYPE_MSG">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">NOT_DATA_TYPE_MSG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Параметр</span> <span class="pre">data_type</span> <span class="pre">не</span> <span class="pre">является</span> <span class="pre">экземпляром</span> <span class="pre">DataType'</span></em><a class="headerlink" href="#src.core.NOT_DATA_TYPE_MSG" title="Ссылка на это определение"></a></dt>
+<dd><p>Текст сообщения об ошибке - параметр не DataType</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.NOT_DICT_OUTPUTS_MSG">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">NOT_DICT_OUTPUTS_MSG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Выходные</span> <span class="pre">данные</span> <span class="pre">алгоритма</span> <span class="pre">не</span> <span class="pre">формате</span> <span class="pre">словаря'</span></em><a class="headerlink" href="#src.core.NOT_DICT_OUTPUTS_MSG" title="Ссылка на это определение"></a></dt>
+<dd><p>Текст сообщения об ошибке - выходные данные не словарь</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.NOT_DICT_PARAMS_MSG">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">NOT_DICT_PARAMS_MSG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Входные</span> <span class="pre">данные</span> <span class="pre">переданы</span> <span class="pre">не</span> <span class="pre">в</span> <span class="pre">формате</span> <span class="pre">словаря'</span></em><a class="headerlink" href="#src.core.NOT_DICT_PARAMS_MSG" title="Ссылка на это определение"></a></dt>
+<dd><p>Текст сообщения об ошибке - входные данные не словарь</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.NOT_LIST_ROW_TEMPL">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">NOT_LIST_ROW_TEMPL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Строка</span> <span class="pre">{0}</span> <span class="pre">в</span> <span class="pre">матрице</span> <span class="pre">не</span> <span class="pre">является</span> <span class="pre">списком'</span></em><a class="headerlink" href="#src.core.NOT_LIST_ROW_TEMPL" title="Ссылка на это определение"></a></dt>
+<dd><p>Шаблон сообщения об ошибке - строка матрицы не список</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.NOT_LIST_VALUE_MSG">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">NOT_LIST_VALUE_MSG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Значение</span> <span class="pre">не</span> <span class="pre">является</span> <span class="pre">списком'</span></em><a class="headerlink" href="#src.core.NOT_LIST_VALUE_MSG" title="Ссылка на это определение"></a></dt>
+<dd><p>Текст сообщения об ошибке - не список</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.NOT_MATRIX_VALUE_MSG">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">NOT_MATRIX_VALUE_MSG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Значение</span> <span class="pre">не</span> <span class="pre">является</span> <span class="pre">матрицей'</span></em><a class="headerlink" href="#src.core.NOT_MATRIX_VALUE_MSG" title="Ссылка на это определение"></a></dt>
+<dd><p>Текст сообщения об ошибке - не матрица</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.NOT_SCALAR_VALUE_MSG">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">NOT_SCALAR_VALUE_MSG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Значение</span> <span class="pre">не</span> <span class="pre">является</span> <span class="pre">скалярным'</span></em><a class="headerlink" href="#src.core.NOT_SCALAR_VALUE_MSG" title="Ссылка на это определение"></a></dt>
+<dd><p>Текст сообщения об ошибке - не скаляр</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.NO_ALGORITHMS_MSG">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">NO_ALGORITHMS_MSG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Алгоритмов</span> <span class="pre">не</span> <span class="pre">найдено'</span></em><a class="headerlink" href="#src.core.NO_ALGORITHMS_MSG" title="Ссылка на это определение"></a></dt>
+<dd><p>Текст сообщения об ошибке - нет алгоритмов</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.OUTPUT_EXISTS_TMPL">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">OUTPUT_EXISTS_TMPL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Элемент</span> <span class="pre">выходных</span> <span class="pre">данных</span> <span class="pre">с</span> <span class="pre">именем</span> <span class="pre">&quot;{0}&quot;</span> <span class="pre">уже</span> <span class="pre">существует'</span></em><a class="headerlink" href="#src.core.OUTPUT_EXISTS_TMPL" title="Ссылка на это определение"></a></dt>
+<dd><p>Шаблон сообщения об ошибке - дублирование выходных данных</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.OUTPUT_NOT_DATAELEMENT_MSG">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">OUTPUT_NOT_DATAELEMENT_MSG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Элемент</span> <span class="pre">выходных</span> <span class="pre">данных</span> <span class="pre">не</span> <span class="pre">является</span> <span class="pre">экземпляром</span> <span class="pre">класса</span> <span class="pre">DataElement'</span></em><a class="headerlink" href="#src.core.OUTPUT_NOT_DATAELEMENT_MSG" title="Ссылка на это определение"></a></dt>
+<dd><p>Текст сообщения об ошибке - выходные данные не DataElement</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.PARAM_EXISTS_TMPL">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">PARAM_EXISTS_TMPL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Элемент</span> <span class="pre">входных</span> <span class="pre">данных</span> <span class="pre">с</span> <span class="pre">именем</span> <span class="pre">&quot;{0}&quot;</span> <span class="pre">уже</span> <span class="pre">существует'</span></em><a class="headerlink" href="#src.core.PARAM_EXISTS_TMPL" title="Ссылка на это определение"></a></dt>
+<dd><p>Шаблон сообщения об ошибке - дублирование входных данных</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.PARAM_NOT_DATAELEMENT_MSG">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">PARAM_NOT_DATAELEMENT_MSG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Элемент</span> <span class="pre">входных</span> <span class="pre">данных</span> <span class="pre">не</span> <span class="pre">является</span> <span class="pre">экземпляром</span> <span class="pre">класса</span> <span class="pre">DataElement'</span></em><a class="headerlink" href="#src.core.PARAM_NOT_DATAELEMENT_MSG" title="Ссылка на это определение"></a></dt>
+<dd><p>Текст сообщения об ошибке - входные данные не DataElement</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.REDUNDANT_OUTPUT_TEMPL">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">REDUNDANT_OUTPUT_TEMPL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Алгоритм</span> <span class="pre">вернул</span> <span class="pre">элемент</span> <span class="pre">&quot;{0}&quot;,</span> <span class="pre">не</span> <span class="pre">указанный</span> <span class="pre">в</span> <span class="pre">структуре</span> <span class="pre">выходных</span> <span class="pre">данных'</span></em><a class="headerlink" href="#src.core.REDUNDANT_OUTPUT_TEMPL" title="Ссылка на это определение"></a></dt>
+<dd><p>Шаблон сообщения об ошибке - лишний элемент выходных данных</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.REDUNDANT_PARAMETER_TEMPL">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">REDUNDANT_PARAMETER_TEMPL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Переданный</span> <span class="pre">элемент</span> <span class="pre">&quot;{0}&quot;</span> <span class="pre">отсутствует</span> <span class="pre">в</span> <span class="pre">структуре</span> <span class="pre">входных</span> <span class="pre">данных</span> <span class="pre">алгоритма'</span></em><a class="headerlink" href="#src.core.REDUNDANT_PARAMETER_TEMPL" title="Ссылка на это определение"></a></dt>
+<dd><p>Шаблон сообщения об ошибке - лишний элемент входных данных</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.TIME_OVER_TEMPL">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">TIME_OVER_TEMPL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Время</span> <span class="pre">для</span> <span class="pre">выполнения</span> <span class="pre">алгоритма</span> <span class="pre">({0}</span> <span class="pre">с)</span> <span class="pre">истекло.</span> <span class="pre">Входные</span> <span class="pre">данные:</span> <span class="pre">{1}'</span></em><a class="headerlink" href="#src.core.TIME_OVER_TEMPL" title="Ссылка на это определение"></a></dt>
+<dd><p>Шаблон сообщения об ошибке - время истекло</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.UNEXPECTED_OUTPUT_TEMPL">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">UNEXPECTED_OUTPUT_TEMPL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'фактический</span> <span class="pre">результат</span> <span class="pre">&quot;{0}&quot;</span> <span class="pre">для</span> <span class="pre">элемента</span> <span class="pre">выходных</span> <span class="pre">данных</span> <span class="pre">&quot;{1}&quot;</span> <span class="pre">не</span> <span class="pre">соответствует</span> <span class="pre">ожидаемому</span> <span class="pre">значению</span> <span class="pre">&quot;{2}&quot;'</span></em><a class="headerlink" href="#src.core.UNEXPECTED_OUTPUT_TEMPL" title="Ссылка на это определение"></a></dt>
+<dd><p>Шаблон сообщения об ошибке - несоответствие выходных данных</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.UNEXPECTED_PARAM_MSG">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">UNEXPECTED_PARAM_MSG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'В</span> <span class="pre">метод</span> <span class="pre">передан</span> <span class="pre">недопустимый</span> <span class="pre">параметр'</span></em><a class="headerlink" href="#src.core.UNEXPECTED_PARAM_MSG" title="Ссылка на это определение"></a></dt>
+<dd><p>Текст сообщения об ошибке - недопустимый параметр</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.UNIT_TEST_FAILED_MSG">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">UNIT_TEST_FAILED_MSG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Модульные</span> <span class="pre">тесты</span> <span class="pre">для</span> <span class="pre">алгоритма</span> <span class="pre">завершились</span> <span class="pre">с</span> <span class="pre">ошибкой'</span></em><a class="headerlink" href="#src.core.UNIT_TEST_FAILED_MSG" title="Ссылка на это определение"></a></dt>
+<dd><p>Текст сообщения об ошибке - ошибка модульных тестов</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.UNSET_OUTPUTS_MSG">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">UNSET_OUTPUTS_MSG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Для</span> <span class="pre">алгоритма</span> <span class="pre">не</span> <span class="pre">заданы</span> <span class="pre">выходные</span> <span class="pre">данные'</span></em><a class="headerlink" href="#src.core.UNSET_OUTPUTS_MSG" title="Ссылка на это определение"></a></dt>
+<dd><p>Текст сообщения об ошибке - не заданы выходные данные</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="src.core.UNSET_PARAMS_MSG">
+<span class="sig-prename descclassname"><span class="pre">src.core.</span></span><span class="sig-name descname"><span class="pre">UNSET_PARAMS_MSG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Для</span> <span class="pre">алгоритма</span> <span class="pre">не</span> <span class="pre">заданы</span> <span class="pre">входные</span> <span class="pre">данные'</span></em><a class="headerlink" href="#src.core.UNSET_PARAMS_MSG" title="Ссылка на это определение"></a></dt>
+<dd><p>Текст сообщения об ошибке - не заданы входные данные</p>
+</dd></dl>
+
 </section>
 </section>
 

@@ -1,0 +1,7 @@
+src.core.data\_element module
+=============================
+
+.. automodule:: src.core.data_element
+   :members:
+   :undoc-members:
+   :show-inheritance:

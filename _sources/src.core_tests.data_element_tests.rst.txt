@@ -1,0 +1,7 @@
+src.core\_tests.data\_element\_tests module
+===========================================
+
+.. automodule:: src.core_tests.data_element_tests
+   :members:
+   :undoc-members:
+   :show-inheritance:

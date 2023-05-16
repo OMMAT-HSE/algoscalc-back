@@ -1,0 +1,7 @@
+src.core.algorithm\_collection module
+=====================================
+
+.. automodule:: src.core.algorithm_collection
+   :members:
+   :undoc-members:
+   :show-inheritance:

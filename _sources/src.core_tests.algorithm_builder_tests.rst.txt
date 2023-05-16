@@ -1,0 +1,7 @@
+src.core\_tests.algorithm\_builder\_tests module
+================================================
+
+.. automodule:: src.core_tests.algorithm_builder_tests
+   :members:
+   :undoc-members:
+   :show-inheritance:

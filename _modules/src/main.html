@@ -81,7 +81,7 @@
 <span class="kn">from</span> <span class="nn">src.api_models</span> <span class="kn">import</span> <span class="n">AlgorithmTitle</span><span class="p">,</span> <span class="n">Algorithms</span><span class="p">,</span> <span class="n">DataDefinition</span><span class="p">,</span> \
     <span class="n">AlgorithmDefinition</span><span class="p">,</span> <span class="n">Data</span><span class="p">,</span> <span class="n">Parameters</span><span class="p">,</span> <span class="n">Outputs</span><span class="p">,</span> <span class="n">AnswerOutputs</span><span class="p">,</span> \
     <span class="n">AnswerAlgorithmDefinition</span>
-<span class="kn">from</span> <span class="nn">src.constants</span> <span class="kn">import</span> <span class="n">APP_CONFIG_FILE_PATH</span><span class="p">,</span> <span class="n">LOG_CONFIG_FILE_PATH</span><span class="p">,</span> \
+<span class="kn">from</span> <span class="nn">src</span> <span class="kn">import</span> <span class="n">APP_CONFIG_FILE_PATH</span><span class="p">,</span> <span class="n">LOG_CONFIG_FILE_PATH</span><span class="p">,</span> \
     <span class="n">PATH_CONFIG</span><span class="p">,</span> <span class="n">ALGORITHM_CONFIG</span><span class="p">,</span> <span class="n">IS_TEST_APP</span><span class="p">,</span> <span class="n">EXECUTE_TIMEOUT</span><span class="p">,</span> \
     <span class="n">ALGORITHMS_ENDPOINT</span><span class="p">,</span> <span class="n">TIME_OVER_MSG</span>
 
@@ -114,7 +114,7 @@
 <span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
 
 
-<div class="viewcode-block" id="get_algorithms"><a class="viewcode-back" href="../../src.html#src.main.get_algorithms">[документация]</a><span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ALGORITHMS_ENDPOINT</span><span class="p">)</span>
+<div class="viewcode-block" id="get_algorithms"><a class="viewcode-back" href="../../src.main.html#src.main.get_algorithms">[документация]</a><span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ALGORITHMS_ENDPOINT</span><span class="p">)</span>
 <span class="k">async</span> <span class="k">def</span> <span class="nf">get_algorithms</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Algorithms</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Возвращает список имеющихся алгоритмов.</span>
 
@@ -128,7 +128,7 @@
     <span class="k">return</span> <span class="n">res</span></div>
 
 
-<div class="viewcode-block" id="get_algorithm"><a class="viewcode-back" href="../../src.html#src.main.get_algorithm">[документация]</a><span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ALGORITHMS_ENDPOINT</span> <span class="o">+</span> <span class="s1">&#39;/</span><span class="si">{algorithm_name}</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="viewcode-block" id="get_algorithm"><a class="viewcode-back" href="../../src.main.html#src.main.get_algorithm">[документация]</a><span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ALGORITHMS_ENDPOINT</span> <span class="o">+</span> <span class="s1">&#39;/</span><span class="si">{algorithm_name}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="k">async</span> <span class="k">def</span> <span class="nf">get_algorithm</span><span class="p">(</span><span class="n">algorithm_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AnswerAlgorithmDefinition</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Возвращает описание выбранного алгоритма.</span>
 
@@ -171,7 +171,7 @@
     <span class="k">return</span> <span class="n">answer</span></div>
 
 
-<div class="viewcode-block" id="get_algorithm_result"><a class="viewcode-back" href="../../src.html#src.main.get_algorithm_result">[документация]</a><span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">ALGORITHMS_ENDPOINT</span> <span class="o">+</span> <span class="s1">&#39;/</span><span class="si">{algorithm_name}</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="viewcode-block" id="get_algorithm_result"><a class="viewcode-back" href="../../src.main.html#src.main.get_algorithm_result">[документация]</a><span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">ALGORITHMS_ENDPOINT</span> <span class="o">+</span> <span class="s1">&#39;/</span><span class="si">{algorithm_name}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="k">async</span> <span class="k">def</span> <span class="nf">get_algorithm_result</span><span class="p">(</span><span class="n">algorithm_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">parameters</span><span class="p">:</span> <span class="n">Parameters</span><span class="p">)</span> \
         <span class="o">-&gt;</span> <span class="n">AnswerOutputs</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Возвращает результат выполнения выбранного алгоритма.</span>

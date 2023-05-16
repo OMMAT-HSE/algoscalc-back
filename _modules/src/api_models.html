@@ -76,7 +76,7 @@
 <span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
 
 
-<div class="viewcode-block" id="AlgorithmTitle"><a class="viewcode-back" href="../../src.html#src.api_models.AlgorithmTitle">[документация]</a><span class="k">class</span> <span class="nc">AlgorithmTitle</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<div class="viewcode-block" id="AlgorithmTitle"><a class="viewcode-back" href="../../src.api_models.html#src.api_models.AlgorithmTitle">[документация]</a><span class="k">class</span> <span class="nc">AlgorithmTitle</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Класс представляет краткую информацию об алгоритме.</span>
 
 <span class="sd">    :param name: уникальное имя алгоритма;</span>
@@ -88,7 +88,7 @@
     <span class="n">title</span><span class="p">:</span> <span class="nb">str</span></div>
 
 
-<div class="viewcode-block" id="Algorithms"><a class="viewcode-back" href="../../src.html#src.api_models.Algorithms">[документация]</a><span class="k">class</span> <span class="nc">Algorithms</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<div class="viewcode-block" id="Algorithms"><a class="viewcode-back" href="../../src.api_models.html#src.api_models.Algorithms">[документация]</a><span class="k">class</span> <span class="nc">Algorithms</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Класс представляет список имеющихся алгоритмов.</span>
 
 <span class="sd">    :param algorithms: список имеющихся алгоритмов.</span>
@@ -98,7 +98,7 @@
     <span class="n">algorithms</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">AlgorithmTitle</span><span class="p">]]</span></div>
 
 
-<div class="viewcode-block" id="DataDefinition"><a class="viewcode-back" href="../../src.html#src.api_models.DataDefinition">[документация]</a><span class="k">class</span> <span class="nc">DataDefinition</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<div class="viewcode-block" id="DataDefinition"><a class="viewcode-back" href="../../src.api_models.html#src.api_models.DataDefinition">[документация]</a><span class="k">class</span> <span class="nc">DataDefinition</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Класс представляет описание элемента входных/выходных данных.</span>
 
 <span class="sd">    :param name: уникальное имя элемента входных/выходных данных;</span>
@@ -127,11 +127,11 @@
                                                  <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span>
                                                        <span class="nb">str</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]]]]]]]</span>
 
-<div class="viewcode-block" id="DataDefinition.Config"><a class="viewcode-back" href="../../src.html#src.api_models.DataDefinition.Config">[документация]</a>    <span class="k">class</span> <span class="nc">Config</span><span class="p">:</span>
+<div class="viewcode-block" id="DataDefinition.Config"><a class="viewcode-back" href="../../src.api_models.html#src.api_models.DataDefinition.Config">[документация]</a>    <span class="k">class</span> <span class="nc">Config</span><span class="p">:</span>
         <span class="n">smart_union</span> <span class="o">=</span> <span class="kc">True</span></div></div>
 
 
-<div class="viewcode-block" id="AlgorithmDefinition"><a class="viewcode-back" href="../../src.html#src.api_models.AlgorithmDefinition">[документация]</a><span class="k">class</span> <span class="nc">AlgorithmDefinition</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<div class="viewcode-block" id="AlgorithmDefinition"><a class="viewcode-back" href="../../src.api_models.html#src.api_models.AlgorithmDefinition">[документация]</a><span class="k">class</span> <span class="nc">AlgorithmDefinition</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Класс представляет описание алгоритма.</span>
 
 <span class="sd">    :param name: уникальное имя алгоритма;</span>
@@ -152,7 +152,7 @@
     <span class="n">outputs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">DataDefinition</span><span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="Data"><a class="viewcode-back" href="../../src.html#src.api_models.Data">[документация]</a><span class="k">class</span> <span class="nc">Data</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<div class="viewcode-block" id="Data"><a class="viewcode-back" href="../../src.api_models.html#src.api_models.Data">[документация]</a><span class="k">class</span> <span class="nc">Data</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Класс представляет фактическое значение элемента входных/выходных данных.</span>
 
 <span class="sd">    :param name: уникальное имя элемента входных/выходных данных;</span>
@@ -167,11 +167,11 @@
                                      <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span>
                                          <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]]]]]]]</span>
 
-<div class="viewcode-block" id="Data.Config"><a class="viewcode-back" href="../../src.html#src.api_models.Data.Config">[документация]</a>    <span class="k">class</span> <span class="nc">Config</span><span class="p">:</span>
+<div class="viewcode-block" id="Data.Config"><a class="viewcode-back" href="../../src.api_models.html#src.api_models.Data.Config">[документация]</a>    <span class="k">class</span> <span class="nc">Config</span><span class="p">:</span>
         <span class="n">smart_union</span> <span class="o">=</span> <span class="kc">True</span></div></div>
 
 
-<div class="viewcode-block" id="Parameters"><a class="viewcode-back" href="../../src.html#src.api_models.Parameters">[документация]</a><span class="k">class</span> <span class="nc">Parameters</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<div class="viewcode-block" id="Parameters"><a class="viewcode-back" href="../../src.api_models.html#src.api_models.Parameters">[документация]</a><span class="k">class</span> <span class="nc">Parameters</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Класс представляет список фактических значений входных данных</span>
 <span class="sd">    для алгоритма.</span>
 
@@ -180,7 +180,7 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">parameters</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Data</span><span class="p">]</span>
 
-<div class="viewcode-block" id="Parameters.get_params_to_execute"><a class="viewcode-back" href="../../src.html#src.api_models.Parameters.get_params_to_execute">[документация]</a>    <span class="k">def</span> <span class="nf">get_params_to_execute</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<div class="viewcode-block" id="Parameters.get_params_to_execute"><a class="viewcode-back" href="../../src.api_models.html#src.api_models.Parameters.get_params_to_execute">[документация]</a>    <span class="k">def</span> <span class="nf">get_params_to_execute</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Возвращает значения входных данных для выполнения алгоритма в</span>
 <span class="sd">        виде словаря, где ключи - имена входных данных, значения - фактические</span>
 <span class="sd">        значения входных данных.</span>
@@ -191,7 +191,7 @@
         <span class="k">return</span> <span class="p">{</span><span class="n">param</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">param</span><span class="o">.</span><span class="n">value</span> <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">}</span></div></div>
 
 
-<div class="viewcode-block" id="Outputs"><a class="viewcode-back" href="../../src.html#src.api_models.Outputs">[документация]</a><span class="k">class</span> <span class="nc">Outputs</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<div class="viewcode-block" id="Outputs"><a class="viewcode-back" href="../../src.api_models.html#src.api_models.Outputs">[документация]</a><span class="k">class</span> <span class="nc">Outputs</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Класс представляет список фактических значений выходных данных</span>
 <span class="sd">    для алгоритма.</span>
 
@@ -201,7 +201,7 @@
     <span class="n">outputs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Data</span><span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="Answer"><a class="viewcode-back" href="../../src.html#src.api_models.Answer">[документация]</a><span class="k">class</span> <span class="nc">Answer</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<div class="viewcode-block" id="Answer"><a class="viewcode-back" href="../../src.api_models.html#src.api_models.Answer">[документация]</a><span class="k">class</span> <span class="nc">Answer</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Базовый класс для ответа, включающего результат выполнения запроса или</span>
 <span class="sd">    текст ошибки выполнения запроса.</span>
 
@@ -213,8 +213,8 @@
     <span class="n">result</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span>
     <span class="n">errors</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
 
-<div class="viewcode-block" id="Answer.Config"><a class="viewcode-back" href="../../src.html#src.api_models.Answer.Config">[документация]</a>    <span class="k">class</span> <span class="nc">Config</span><span class="p">:</span>
-<div class="viewcode-block" id="Answer.Config.schema_extra"><a class="viewcode-back" href="../../src.html#src.api_models.Answer.Config.schema_extra">[документация]</a>        <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="Answer.Config"><a class="viewcode-back" href="../../src.api_models.html#src.api_models.Answer.Config">[документация]</a>    <span class="k">class</span> <span class="nc">Config</span><span class="p">:</span>
+<div class="viewcode-block" id="Answer.Config.schema_extra"><a class="viewcode-back" href="../../src.api_models.html#src.api_models.Answer.Config.schema_extra">[документация]</a>        <span class="nd">@staticmethod</span>
         <span class="k">def</span> <span class="nf">schema_extra</span><span class="p">(</span><span class="n">schema</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot;Корректирует JSON Schema класса для корректной валидации</span>
 <span class="sd">            nullable значений.&quot;&quot;&quot;</span>
@@ -232,7 +232,7 @@
                     <span class="n">value</span><span class="p">[</span><span class="s1">&#39;anyOf&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;null&#39;</span><span class="p">})</span></div></div></div>
 
 
-<div class="viewcode-block" id="AnswerAlgorithmDefinition"><a class="viewcode-back" href="../../src.html#src.api_models.AnswerAlgorithmDefinition">[документация]</a><span class="k">class</span> <span class="nc">AnswerAlgorithmDefinition</span><span class="p">(</span><span class="n">Answer</span><span class="p">):</span>
+<div class="viewcode-block" id="AnswerAlgorithmDefinition"><a class="viewcode-back" href="../../src.api_models.html#src.api_models.AnswerAlgorithmDefinition">[документация]</a><span class="k">class</span> <span class="nc">AnswerAlgorithmDefinition</span><span class="p">(</span><span class="n">Answer</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Класс ответа, включающего результат выполнения запроса описания</span>
 <span class="sd">    алгоритма или текст ошибки выполнения запроса. Наследует от класса Answer.</span>
 
@@ -242,7 +242,7 @@
     <span class="n">result</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AlgorithmDefinition</span><span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="AnswerOutputs"><a class="viewcode-back" href="../../src.html#src.api_models.AnswerOutputs">[документация]</a><span class="k">class</span> <span class="nc">AnswerOutputs</span><span class="p">(</span><span class="n">Answer</span><span class="p">):</span>
+<div class="viewcode-block" id="AnswerOutputs"><a class="viewcode-back" href="../../src.api_models.html#src.api_models.AnswerOutputs">[документация]</a><span class="k">class</span> <span class="nc">AnswerOutputs</span><span class="p">(</span><span class="n">Answer</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Класс ответа, включающего результат выполнения алгоритма или</span>
 <span class="sd">    текст ошибки выполнения алгоритма. Наследует от класса Answer.</span>
 

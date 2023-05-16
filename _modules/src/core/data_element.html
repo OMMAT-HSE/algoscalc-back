@@ -72,14 +72,14 @@
 
 <span class="kn">from</span> <span class="nn">strenum</span> <span class="kn">import</span> <span class="n">UppercaseStrEnum</span>
 <span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">auto</span>
-<span class="kn">from</span> <span class="nn">src.core.constants</span> <span class="kn">import</span> <span class="n">NON_STRING_PARAM_TEMPL</span><span class="p">,</span> \
-    <span class="n">EMPTY_STRING_PARAM_TEMPL</span><span class="p">,</span> <span class="n">NOT_DATA_TYPE_MSG</span><span class="p">,</span> <span class="n">NOT_DATA_SHAPE_MSG</span><span class="p">,</span> \
-    <span class="n">NONE_VALUE_MSG</span><span class="p">,</span> <span class="n">NOT_SCALAR_VALUE_MSG</span><span class="p">,</span> <span class="n">NOT_MATRIX_VALUE_MSG</span><span class="p">,</span> \
-    <span class="n">NOT_LIST_VALUE_MSG</span><span class="p">,</span> <span class="n">NOT_LIST_ROW_TEMPL</span><span class="p">,</span> <span class="n">MISMATCH_VALUE_TYPE_TEMPL</span><span class="p">,</span> \
+<span class="kn">from</span> <span class="nn">src.core</span> <span class="kn">import</span> <span class="n">NON_STRING_PARAM_TEMPL</span><span class="p">,</span> <span class="n">EMPTY_STRING_PARAM_TEMPL</span><span class="p">,</span> \
+    <span class="n">NOT_DATA_TYPE_MSG</span><span class="p">,</span> <span class="n">NOT_DATA_SHAPE_MSG</span><span class="p">,</span> <span class="n">NONE_VALUE_MSG</span><span class="p">,</span> \
+    <span class="n">NOT_SCALAR_VALUE_MSG</span><span class="p">,</span> <span class="n">NOT_MATRIX_VALUE_MSG</span><span class="p">,</span> <span class="n">NOT_LIST_VALUE_MSG</span><span class="p">,</span> \
+    <span class="n">NOT_LIST_ROW_TEMPL</span><span class="p">,</span> <span class="n">MISMATCH_VALUE_TYPE_TEMPL</span><span class="p">,</span> \
     <span class="n">MISMATCH_LIST_VALUE_TYPE_TEMPL</span><span class="p">,</span> <span class="n">MISMATCH_MATRIX_VALUE_TYPE_TEMPL</span>
 
 
-<div class="viewcode-block" id="DataType"><a class="viewcode-back" href="../../../src.core.html#src.core.data_element.DataType">[документация]</a><span class="k">class</span> <span class="nc">DataType</span><span class="p">(</span><span class="n">UppercaseStrEnum</span><span class="p">):</span>
+<div class="viewcode-block" id="DataType"><a class="viewcode-back" href="../../../src.core.data_element.html#src.core.data_element.DataType">[документация]</a><span class="k">class</span> <span class="nc">DataType</span><span class="p">(</span><span class="n">UppercaseStrEnum</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Класс является перечислением, представляет допустимые типы данных</span>
 <span class="sd">    для входных и выходных данных. Возможными значениями класса являются</span>
 <span class="sd">    INT, FLOAT, STRING, BOOL, соответствующие типам данных</span>
@@ -100,7 +100,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">DataType</span><span class="o">.</span><span class="n">__types_dict</span><span class="p">()[</span><span class="bp">self</span><span class="p">]</span>
 
-<div class="viewcode-block" id="DataType.types"><a class="viewcode-back" href="../../../src.core.html#src.core.data_element.DataType.types">[документация]</a>    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="DataType.types"><a class="viewcode-back" href="../../../src.core.data_element.html#src.core.data_element.DataType.types">[документация]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">types</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">type</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Возвращает список допустимых типов данных.</span>
 
@@ -120,7 +120,7 @@
                 <span class="n">DataType</span><span class="o">.</span><span class="n">BOOL</span><span class="p">:</span> <span class="nb">bool</span><span class="p">}</span></div>
 
 
-<div class="viewcode-block" id="DataShape"><a class="viewcode-back" href="../../../src.core.html#src.core.data_element.DataShape">[документация]</a><span class="k">class</span> <span class="nc">DataShape</span><span class="p">(</span><span class="n">UppercaseStrEnum</span><span class="p">):</span>
+<div class="viewcode-block" id="DataShape"><a class="viewcode-back" href="../../../src.core.data_element.html#src.core.data_element.DataShape">[документация]</a><span class="k">class</span> <span class="nc">DataShape</span><span class="p">(</span><span class="n">UppercaseStrEnum</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Класс DataShape является перечислением, представляет допустимые</span>
 <span class="sd">    размерности для входных и выходных данных. Возможными значениями</span>
 <span class="sd">    класса являются SCALAR, LIST, MATRIX, соответствующие скалярному значению,</span>
@@ -131,7 +131,7 @@
     <span class="n">LIST</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
     <span class="n">MATRIX</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
 
-<div class="viewcode-block" id="DataShape.get_shape_errors"><a class="viewcode-back" href="../../../src.core.html#src.core.data_element.DataShape.get_shape_errors">[документация]</a>    <span class="k">def</span> <span class="nf">get_shape_errors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value_to_check</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<div class="viewcode-block" id="DataShape.get_shape_errors"><a class="viewcode-back" href="../../../src.core.data_element.html#src.core.data_element.DataShape.get_shape_errors">[документация]</a>    <span class="k">def</span> <span class="nf">get_shape_errors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value_to_check</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Проверяет соответствие проверяемого значения размерности.</span>
 
 <span class="sd">        :param value_to_check: значение для проверки;</span>
@@ -160,7 +160,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span></div>
 
 
-<div class="viewcode-block" id="DataElement"><a class="viewcode-back" href="../../../src.core.html#src.core.data_element.DataElement">[документация]</a><span class="k">class</span> <span class="nc">DataElement</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="DataElement"><a class="viewcode-back" href="../../../src.core.data_element.html#src.core.data_element.DataElement">[документация]</a><span class="k">class</span> <span class="nc">DataElement</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Класс представляет элемент входных или выходных данных для алгоритма.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -256,7 +256,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__default_value</span>
 
-<div class="viewcode-block" id="DataElement.get_check_value_errors"><a class="viewcode-back" href="../../../src.core.html#src.core.data_element.DataElement.get_check_value_errors">[документация]</a>    <span class="k">def</span> <span class="nf">get_check_value_errors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<div class="viewcode-block" id="DataElement.get_check_value_errors"><a class="viewcode-back" href="../../../src.core.data_element.html#src.core.data_element.DataElement.get_check_value_errors">[документация]</a>    <span class="k">def</span> <span class="nf">get_check_value_errors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Проверяет соответствие проверяемого значения типу данных</span>
 <span class="sd">        и размерности.</span>
 

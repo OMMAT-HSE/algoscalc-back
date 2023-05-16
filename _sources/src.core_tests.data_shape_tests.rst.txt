@@ -1,0 +1,7 @@
+src.core\_tests.data\_shape\_tests module
+=========================================
+
+.. automodule:: src.core_tests.data_shape_tests
+   :members:
+   :undoc-members:
+   :show-inheritance:

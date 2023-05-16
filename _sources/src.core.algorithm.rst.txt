@@ -1,0 +1,7 @@
+src.core.algorithm module
+=========================
+
+.. automodule:: src.core.algorithm
+   :members:
+   :undoc-members:
+   :show-inheritance:

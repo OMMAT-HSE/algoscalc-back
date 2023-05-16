@@ -1,0 +1,7 @@
+src.api\_models module
+======================
+
+.. automodule:: src.api_models
+   :members:
+   :undoc-members:
+   :show-inheritance:

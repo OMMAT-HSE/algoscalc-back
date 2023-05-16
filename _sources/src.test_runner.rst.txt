@@ -1,0 +1,7 @@
+src.test\_runner module
+=======================
+
+.. automodule:: src.test_runner
+   :members:
+   :undoc-members:
+   :show-inheritance:
