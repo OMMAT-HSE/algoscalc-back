@@ -75,6 +75,7 @@
 <span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">logging.config</span>
 <span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+<span class="kn">from</span> <span class="nn">fastapi.middleware.cors</span> <span class="kn">import</span> <span class="n">CORSMiddleware</span>
 
 <span class="kn">from</span> <span class="nn">src.core.algorithm_collection</span> <span class="kn">import</span> <span class="n">AlgorithmCollection</span><span class="p">,</span> \
     <span class="n">ALGORITHM_NOT_EXISTS_TEMPL</span>
@@ -112,6 +113,14 @@
 <span class="n">algorithms</span> <span class="o">=</span> <span class="n">AlgorithmCollection</span><span class="p">(</span><span class="n">path_config</span><span class="p">,</span> <span class="n">algorithm_config</span><span class="p">,</span> <span class="n">log_config</span><span class="p">)</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+<span class="n">web_config</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;web_config&#39;</span><span class="p">]</span>
+<span class="n">app</span><span class="o">.</span><span class="n">add_middleware</span><span class="p">(</span>
+    <span class="n">CORSMiddleware</span><span class="p">,</span>
+    <span class="n">allow_origins</span><span class="o">=</span><span class="n">web_config</span><span class="p">[</span><span class="s1">&#39;cors&#39;</span><span class="p">][</span><span class="s1">&#39;origins&#39;</span><span class="p">],</span>
+    <span class="n">allow_credentials</span><span class="o">=</span><span class="n">web_config</span><span class="p">[</span><span class="s1">&#39;cors&#39;</span><span class="p">][</span><span class="s1">&#39;credentials&#39;</span><span class="p">],</span>
+    <span class="n">allow_methods</span><span class="o">=</span><span class="n">web_config</span><span class="p">[</span><span class="s1">&#39;cors&#39;</span><span class="p">][</span><span class="s1">&#39;methods&#39;</span><span class="p">],</span>
+    <span class="n">allow_headers</span><span class="o">=</span><span class="n">web_config</span><span class="p">[</span><span class="s1">&#39;cors&#39;</span><span class="p">][</span><span class="s1">&#39;headers&#39;</span><span class="p">]</span>
+<span class="p">)</span>
 
 
 <div class="viewcode-block" id="get_algorithms"><a class="viewcode-back" href="../../src.html#src.main.get_algorithms">[документация]</a><span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ALGORITHMS_ENDPOINT</span><span class="p">)</span>
