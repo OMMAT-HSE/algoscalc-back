@@ -1,4 +1,4 @@
-name: "CI CD actions"
+name: "CI/CD actions"
 on:
   push:
     tags:
@@ -21,10 +21,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Python 3.9
+    - name: Set up Python 3.11
       uses: actions/setup-python@v3
       with:
-        python-version: '3.9'
+        python-version: '3.11'
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -40,10 +40,10 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: Set up Python 3.9
+      - name: Set up Python 3.11
         uses: actions/setup-python@v3
         with:
-          python-version: '3.9'
+          python-version: '3.11'
       - name: Install tox
         run: pip install tox
       - name: Run tox
@@ -62,7 +62,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v3
         with:
-          python-version: 3.9
+          python-version: 3.11
       - uses: TrueBrain/actions-flake8@v2
         with:
           only_warn: 1
@@ -108,35 +108,3 @@ jobs:
             echo ${{ secrets.SECRET_PHRASE }} | sudo -S docker-compose --file docker-compose.prod.yml down;
             echo ${{ secrets.SECRET_PHRASE }} | sudo -S docker-compose --file docker-compose.prod.yml up -d --build;
             echo ${{ secrets.SECRET_PHRASE }} | sudo -S docker system prune --all --force;
-  sphinx_docs_to_gh-pages:
-    permissions:
-      contents: write
-      pages: write
-    name: Docs deploy
-    runs-on: ubuntu-latest
-    needs: prod_deploy
-    if: needs.prod_deploy.result == 'success'
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v3
-        with:
-          python-version: '3.9'
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r src/requirements.txt
-          pip install -r docs/requirements.txt
-      - name: Build docs
-        run: |
-          sphinx-apidoc -o docs .
-          cd docs
-          make html
-      - name: Deploy docs to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/_build/html
-          cname: ${{ secrets.DOCS_PAGES_DOMAIN }}
