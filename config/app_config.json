@@ -12,7 +12,14 @@
   "web_config": {
     "cors": {
       "origins": [
-        "http://localhost"
+        "http://owl-test.ommat.ru",
+        "http://owl-prod.ommat.ru",
+        "https://owl-test.ommat.ru",
+        "https://owl-prod.ommat.ru",
+        "http://localhost",
+        "http://localhost:14444",
+        "http://localhost:15555",
+        "http://localhost:44486"
       ],
       "credentials": true,
       "methods": ["*"],
