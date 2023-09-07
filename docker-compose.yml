@@ -2,15 +2,15 @@ version: '3.7'
 
 services:
   backend_test:
-    container_name: BackendTest
+    container_name: BackendTest_23_2
     restart: always
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - '4445:8080'
+      - '24445:8080'
     volumes:
-      - backend_test_logs:/code/logs
+      - backend_test_logs_23_2:/code/logs
 
 volumes:
-  backend_test_logs:
+  backend_test_logs_23_2:
