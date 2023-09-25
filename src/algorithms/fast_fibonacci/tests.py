@@ -11,6 +11,9 @@ class TestCase(unittest.TestCase):
         for index, number in enumerate(self.numbers):
             self.assertEqual(main(str(index + 1)), {'result': str(number)})
 
+    def test_fibonacci_2(self):
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()
