@@ -22,13 +22,13 @@ def mulmatrix2x1(a: tuple[int, int], b: tuple[int, int, int, int]) -> tuple[int,
 
 def fibonacci(n: int) -> int:
     a = (0, 1, 1, 1)
-    b = tuple(a)
-    while n > 1:
+    b = (1, 0, 0, 1)
+    while n > 0:
         if n % 2 == 1:
             b = mulmatrix2x2(b, a)
         n //= 2
         a = mulmatrix2x2(a, a)
-    return mulmatrix2x1((1, 0), mulmatrix2x2(b, a))
+    return mulmatrix2x1((0, 1), b)
 
 
 def check(n: int) -> None:
@@ -37,7 +37,10 @@ def check(n: int) -> None:
 
 
 def main(n: str):
-    N = int(n)
+    try:
+        N = int(n)
+    except ValueError:
+        raise ValueError("n должно быть целым числом")
     check(N)
     return {'result': str(fibonacci(N)[0])}
 
