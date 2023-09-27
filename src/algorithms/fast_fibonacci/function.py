@@ -5,10 +5,10 @@ sys.set_int_max_str_digits(1000000000)
 
 def mulmatrix2x1(a: (int, int), b: (int, int, int, int)) -> (int, int):
     """
-    returns result of the multiplication of 2x2 and 2x1
+    returns result of the multiplication of 2x1 and 2x2
 
     Parameters:
-        a (tuple[int, int, int, int]): a first matrix
+        a (tuple[int, int]): a first matrix
         b (tuple[int, int, int, int]): a second matrix
 
     Returns:
