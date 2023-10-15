@@ -74,8 +74,9 @@ def __generate_permutations_iter(letters_list: list[str]) -> list[list[str]]:
                     continue
                 # перестановка двух элементов
                 pmt_lst[-1], pmt_lst[pos] = pmt_lst[pos], pmt_lst[-1]
-                # если сгенерированная перестановка уже содержится в итерационном
-                # списке перестановок или в общем списке - пропускаем итерацию цикла
+                # если сгенерированная перестановка уже содержится в
+                # итерационном списке перестановок или в общем списке
+                # - пропускаем итерацию цикла
                 if pmt_lst in permutations_iteration_list or \
                         pmt_lst in permutations_list:
                     continue
