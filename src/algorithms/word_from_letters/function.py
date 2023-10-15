@@ -56,7 +56,7 @@ def __generate_permutations_iter(letters_list: list[str]) -> list[list[str]]:
     while letters_list:  # пока множество содержит элементы для перестановок
         # список, содержащий перестановки всех элементов в одной итерации
         permutations_iteration_list = []
-        # текущий элемент, с которым будут генерироваться перестановки на итерации
+        # текущий элемент, с которым будут генерироваться перестановки
         current_item = letters_list.pop()
         # обход вложенных списков перестановок с добавлением нового элемента
         for permutation in permutations_list:
@@ -66,14 +66,18 @@ def __generate_permutations_iter(letters_list: list[str]) -> list[list[str]]:
 
             # переставление нового элемента местами на различные позиции
             for pos in range(len(permutation)-1):
-                pmt_lst = [item for item in permutation]  # создание списка для перестановки элементов
-                # если элементы одинаковы, то перестановка не имеет смысла - пропускаем итерацию
+                # создание списка для перестановки элементов
+                pmt_lst = [item for item in permutation]
+                # если элементы одинаковы, то перестановка не имеет смысла -
+                # пропускаем итерацию
                 if pmt_lst[-1] == pmt_lst[pos]:
                     continue
-                pmt_lst[-1], pmt_lst[pos] = pmt_lst[pos], pmt_lst[-1]  # перестановка двух элементов
-                # если сгенерированная перестановка уже содержится в итерационном списке перестановок
-                # или в общем списке - пропускаем итерацию цикла
-                if pmt_lst in permutations_iteration_list or pmt_lst in permutations_list:
+                # перестановка двух элементов
+                pmt_lst[-1], pmt_lst[pos] = pmt_lst[pos], pmt_lst[-1]
+                # если сгенерированная перестановка уже содержится в итерационном
+                # списке перестановок или в общем списке - пропускаем итерацию цикла
+                if pmt_lst in permutations_iteration_list or \
+                        pmt_lst in permutations_list:
                     continue
                 # добавление получившийся перестановки во временный список
                 permutations_iteration_list.append(pmt_lst)
