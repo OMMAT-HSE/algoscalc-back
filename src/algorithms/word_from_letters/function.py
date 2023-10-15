@@ -1,6 +1,5 @@
 import time
 
-import pymorphy3
 from pymorphy3 import MorphAnalyzer
 
 
@@ -18,9 +17,15 @@ def generate_permutations(letters_str: str) -> list[str]:
     """
     __validate(letters_str)
 
+    if len(letters_str) < 1:
+        return ['']
+    if len(letters_str) == 1:
+        return [letters_str]
+
     letters_list = list(letters_str.lower())
     letters_list = __generate_permutations_iter(letters_list)
-    return ["".join(lst) for lst in letters_list]  # объединение вложенных списков в строки
+    # объединение вложенных списков в строки
+    return ["".join(lst) for lst in letters_list]
 
 
 def __validate(letters_str: str) -> None:
@@ -30,7 +35,7 @@ def __validate(letters_str: str) -> None:
     :raise ValueError: если входящая строка содержит пробел или ее длина
     превышает максимально возможное значение
     """
-    if type(letters_str) != str:
+    if not isinstance(letters_str, str):
         raise TypeError('Переданный параметр не является строкой')
     if len(letters_str) > LENGTH_LIMIT:
         raise ValueError(f'Длина введенной строки превышает {LENGTH_LIMIT} символов')
@@ -44,11 +49,6 @@ def __generate_permutations_iter(letters_list: list[str]) -> list[list[str]]:
     :return: список перестановок, где каждая перестановка список элементов
     списка
     """
-    if len(letters_list) < 1:
-        return [['']]
-    if len(letters_list) == 1:
-        return [[letters_list.pop()]]
-
     permutations_list = [[letters_list.pop()]]  # список со всеми перестановками
 
     while letters_list:  # пока множество содержит элементы для перестановок
@@ -56,11 +56,12 @@ def __generate_permutations_iter(letters_list: list[str]) -> list[list[str]]:
         current_item = letters_list.pop()  # текущий элемент, с которым будут генерироваться перестановки на итерации
         for permutation in permutations_list:  # обход вложенных списков перестановок с добавлением нового элемента
             permutation.append(current_item)
-
             permutations_iteration_list.append(permutation)  # добавление главной перестановки в итерационный список
+
             for pos in range(len(permutation)-1):  # переставление нового элемента местами на различные позиции
                 pmt_lst = [item for item in permutation]  # создание списка для перестановки элементов
-                if pmt_lst[-1] == pmt_lst[pos]:  # если элементы одинаковы, то перестановка не имеет смысла - пропускаем итерацию
+                # если элементы одинаковы, то перестановка не имеет смысла - пропускаем итерацию
+                if pmt_lst[-1] == pmt_lst[pos]:
                     continue
                 pmt_lst[-1], pmt_lst[pos] = pmt_lst[pos], pmt_lst[-1]  # перестановка двух элементов местами
                 # если сгенерированная перестановка уже содержится в итерационном списке перестановок или в общем
