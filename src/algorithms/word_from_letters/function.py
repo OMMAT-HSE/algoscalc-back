@@ -38,13 +38,15 @@ def __validate(letters_str: str) -> None:
     if not isinstance(letters_str, str):
         raise TypeError('Переданный параметр не является строкой')
     if len(letters_str) > LENGTH_LIMIT:
-        raise ValueError(f'Длина введенной строки превышает {LENGTH_LIMIT} символов')
+        raise ValueError(f'Длина введенной строки превышает '
+                         f'{LENGTH_LIMIT} символов')
     if ' ' in letters_str:
         raise ValueError('Введенная строка содержит пробел')
 
 
 def __generate_permutations_iter(letters_list: list[str]) -> list[list[str]]:
-    """Вспомогательная функция для генерации перестановок элементов итеративным методом
+    """Вспомогательная функция для генерации перестановок элементов
+    итеративным методом
     :param letters_list: список из строковых символов
     :return: список перестановок, где каждая перестановка список элементов
     списка
@@ -52,24 +54,31 @@ def __generate_permutations_iter(letters_list: list[str]) -> list[list[str]]:
     permutations_list = [[letters_list.pop()]]  # список со всеми перестановками
 
     while letters_list:  # пока множество содержит элементы для перестановок
-        permutations_iteration_list = []  # список, содержащий перестановки всех элементов в одной итерации
-        current_item = letters_list.pop()  # текущий элемент, с которым будут генерироваться перестановки на итерации
-        for permutation in permutations_list:  # обход вложенных списков перестановок с добавлением нового элемента
+        # список, содержащий перестановки всех элементов в одной итерации
+        permutations_iteration_list = []
+        # текущий элемент, с которым будут генерироваться перестановки на итерации
+        current_item = letters_list.pop()
+        # обход вложенных списков перестановок с добавлением нового элемента
+        for permutation in permutations_list:
             permutation.append(current_item)
-            permutations_iteration_list.append(permutation)  # добавление главной перестановки в итерационный список
+            # добавление главной перестановки в итерационный список
+            permutations_iteration_list.append(permutation)
 
-            for pos in range(len(permutation)-1):  # переставление нового элемента местами на различные позиции
+            # переставление нового элемента местами на различные позиции
+            for pos in range(len(permutation)-1):
                 pmt_lst = [item for item in permutation]  # создание списка для перестановки элементов
                 # если элементы одинаковы, то перестановка не имеет смысла - пропускаем итерацию
                 if pmt_lst[-1] == pmt_lst[pos]:
                     continue
-                pmt_lst[-1], pmt_lst[pos] = pmt_lst[pos], pmt_lst[-1]  # перестановка двух элементов местами
-                # если сгенерированная перестановка уже содержится в итерационном списке перестановок или в общем
-                # списке - пропускаем итерацию цикла
+                pmt_lst[-1], pmt_lst[pos] = pmt_lst[pos], pmt_lst[-1]  # перестановка двух элементов
+                # если сгенерированная перестановка уже содержится в итерационном списке перестановок
+                # или в общем списке - пропускаем итерацию цикла
                 if pmt_lst in permutations_iteration_list or pmt_lst in permutations_list:
                     continue
-                permutations_iteration_list.append(pmt_lst)  # добавление получившийся перестановки во временный список
-        permutations_list = permutations_iteration_list  # добавление всех итерационных перестановок в общий список
+                # добавление получившийся перестановки во временный список
+                permutations_iteration_list.append(pmt_lst)
+        # добавление всех итерационных перестановок в общий список
+        permutations_list = permutations_iteration_list
 
     return permutations_list
 
@@ -86,7 +95,8 @@ def main(letters: str) -> dict[str, list[str]]:
     """
     morph = MorphAnalyzer()
     exist_words = []  # список существующих слов
-    permutations_letters = generate_permutations(letters)  # получение списка со всеми перестановками
+    # получение списка со всеми перестановками
+    permutations_letters = generate_permutations(letters)
 
     for word in permutations_letters:  # перебор перестановок
         if morph.word_is_known(word):  # если перестановка - существующее слово
