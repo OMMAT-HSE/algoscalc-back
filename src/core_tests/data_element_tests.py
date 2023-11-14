@@ -57,6 +57,19 @@ class DataElementTests(unittest.TestCase):
                                DataElement.__init__, None, NAME, TITLE,
                                DESCRIPTION, DataType.INT, 100500, 0)
 
+    def test_undefined_value(self):
+        data_element1 = DataElement(NAME, TITLE, DESCRIPTION, DataType.INT,
+                                    DataShape.SCALAR, 777)
+        self.assertIsNotNone(data_element1.default_value)
+
+        data_element2 = DataElement(NAME, TITLE, DESCRIPTION, DataType.INT,
+                                    DataShape.SCALAR)
+        self.assertIsNone(data_element2.default_value)
+
+        data_element3 = DataElement(NAME, TITLE, DESCRIPTION, DataType.INT,
+                                    DataShape.SCALAR, deterministic=False)
+        self.assertIsNone(data_element3.default_value)
+
     def test_default_value_shape_scalar_errors(self):
         with self.assertRaises(ValueError) as error:
             DataElement(NAME, TITLE, DESCRIPTION, DataType.INT,

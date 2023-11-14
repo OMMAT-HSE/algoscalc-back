@@ -136,6 +136,21 @@ class AlgorithmTests(unittest.TestCase):
         self.assertRaisesRegex(ValueError, PARAM_EXISTS_TMPL.format(PARAM_NAME),
                                self.alg.add_parameter, self.param)
 
+    def test_undefined_parameter(self):
+        alg = Algorithm(NAME, TITLE, DESCRIPTION, LOG_CONFIG_STUB, 0)
+        param = DataElement(OUTPUT_NAME, OUTPUT_TITLE, OUTPUT_DESCRIPTION,
+                            DataType.INT, DataShape.SCALAR, 10)
+        output = DataElement(OUTPUT_NAME, OUTPUT_TITLE, OUTPUT_DESCRIPTION,
+                             DataType.INT, DataShape.SCALAR, 10)
+        alg.add_parameter(param)
+        alg.add_output(output)
+
+        def method(output_name):
+            return {OUTPUT_NAME: output_name}
+
+        alg.add_execute_method(method)
+        self.assertIsNone(alg.get_test_errors())
+
     def test_add_output(self):
         self.alg.add_output(self.output)
         self.assertEqual(self.alg.outputs, (self.output,))

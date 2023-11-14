@@ -182,6 +182,11 @@ class Algorithm(object):
             params = self.__get_default_parameters()
             outputs = self.execute(params)
             for key, value in self.__outputs.items():
+                if not self.__outputs[key].deterministic:
+                    text = self.__outputs[key].get_check_value_errors(outputs[key])
+                    if text:
+                        raise ValueError(text)
+                    continue
                 if outputs[key] != value.default_value:
                     raise ValueError(
                         UNEXPECTED_OUTPUT_TEMPL.format(key, outputs[key],

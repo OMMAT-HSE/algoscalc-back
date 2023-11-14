@@ -96,7 +96,7 @@ class DataElement(object):
     """
     def __init__(self, name: str, title: str, description: str,
                  data_type: DataType, data_shape: DataShape,
-                 default_value: Any):
+                 default_value: Any = None, deterministic: bool = True):
         """Конструктор класса
 
         :param name: уникальное имя элемента входных/выходных данных;
@@ -111,6 +111,8 @@ class DataElement(object):
         :type data_shape: DataShape
         :param default_value: значение по умолчанию.
         :type default_value: Any
+        :param deterministic: признак определенности значения
+        :type deterministic: bool
         :raises ValueError: при несоответствии типов данных для параметров.
         """
         param_errors = DataElement.__check_params(name, title, description,
@@ -122,10 +124,12 @@ class DataElement(object):
         self.__description: str = description
         self.__data_type: DataType = data_type
         self.__data_shape: DataShape = data_shape
-        default_value_errors = self.get_check_value_errors(default_value)
-        if default_value_errors is not None:
-            raise ValueError(default_value_errors)
-        self.__default_value: Any = default_value
+        self.__deterministic: bool = False if default_value is None else deterministic
+        if self.__deterministic:
+            default_value_errors = self.get_check_value_errors(default_value)
+            if default_value_errors is not None:
+                raise ValueError(default_value_errors)
+        self.__default_value: Any = default_value if self.__deterministic else None
 
     def __str__(self) -> str:
         """Возвращает строковое представление экземпляра класса."""
@@ -149,6 +153,15 @@ class DataElement(object):
         :rtype: str
         """
         return self.__title
+
+    @property
+    def deterministic(self) -> bool:
+        """Признак определенности элемента.
+
+        :return: название элемента.
+        :rtype: str
+        """
+        return self.__deterministic
 
     @property
     def description(self) -> str:
