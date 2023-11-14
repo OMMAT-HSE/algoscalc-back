@@ -71,30 +71,27 @@ class DataElementTests(unittest.TestCase):
         self.assertIsNone(data_element3.default_value)
 
     def test_default_value_shape_scalar_errors(self):
-        with self.assertRaises(ValueError) as error:
-            DataElement(NAME, TITLE, DESCRIPTION, DataType.INT,
-                        DataShape.SCALAR, None)
-        self.assertEqual(str(error.exception), NONE_VALUE_MSG)
+        data_element = DataElement(NAME, TITLE, DESCRIPTION, DataType.INT,
+                                   DataShape.SCALAR, None)
+        self.assertFalse(data_element.deterministic)
         with self.assertRaises(ValueError) as error:
             DataElement(NAME, TITLE, DESCRIPTION, DataType.INT,
                         DataShape.SCALAR, {})
         self.assertEqual(str(error.exception), NOT_SCALAR_VALUE_MSG)
 
     def test_default_value_shape_list_errors(self):
-        with self.assertRaises(ValueError) as error:
-            DataElement(NAME, TITLE, DESCRIPTION, DataType.INT,
-                        DataShape.LIST, None)
-        self.assertEqual(str(error.exception), NONE_VALUE_MSG)
+        data_element = DataElement(NAME, TITLE, DESCRIPTION, DataType.INT,
+                                   DataShape.LIST, None)
+        self.assertFalse(data_element.deterministic)
         with self.assertRaises(ValueError) as error:
             DataElement(NAME, TITLE, DESCRIPTION, DataType.INT,
                         DataShape.LIST, 'str')
         self.assertEqual(str(error.exception), NOT_LIST_VALUE_MSG)
 
     def test_default_value_shape_matrix_errors(self):
-        with self.assertRaises(ValueError) as error:
-            DataElement(NAME, TITLE, DESCRIPTION, DataType.INT,
-                        DataShape.MATRIX, None)
-        self.assertEqual(str(error.exception), NONE_VALUE_MSG)
+        data_element = DataElement(NAME, TITLE, DESCRIPTION, DataType.INT,
+                                   DataShape.MATRIX, None)
+        self.assertFalse(data_element.deterministic)
         with self.assertRaises(ValueError) as error:
             DataElement(NAME, TITLE, DESCRIPTION, DataType.INT,
                         DataShape.MATRIX, 'str')
