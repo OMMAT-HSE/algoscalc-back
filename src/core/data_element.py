@@ -124,12 +124,14 @@ class DataElement(object):
         self.__description: str = description
         self.__data_type: DataType = data_type
         self.__data_shape: DataShape = data_shape
-        self.__deterministic: bool = False if default_value is None else deterministic
+        self.__deterministic: bool = (False if default_value is None
+                                      else deterministic)
         if self.__deterministic:
             default_value_errors = self.get_check_value_errors(default_value)
             if default_value_errors is not None:
                 raise ValueError(default_value_errors)
-        self.__default_value: Any = default_value if self.__deterministic else None
+        self.__default_value: Any = (default_value if self.__deterministic
+                                     else None)
 
     def __str__(self) -> str:
         """Возвращает строковое представление экземпляра класса."""
@@ -224,7 +226,7 @@ class DataElement(object):
         if self.__data_type.type == float:
             if type(value) not in [int, float]:
                 return MISMATCH_VALUE_TYPE_TEMPL.format(self.__data_type)
-        elif type(value) != self.__data_type.type:
+        elif not isinstance(value, self.__data_type.type):
             return MISMATCH_VALUE_TYPE_TEMPL.format(self.__data_type)
 
     def __check_list_value(self, value: Any) -> Optional[str]:
@@ -234,7 +236,8 @@ class DataElement(object):
                 if type(item) not in [int, float]:
                     return MISMATCH_LIST_VALUE_TYPE_TEMPL.format(
                         idx, self.__data_type)
-            elif item is not None and type(item) != self.__data_type.type:
+            elif (item is not None
+                  and not isinstance(item, self.__data_type.type)):
                 return MISMATCH_LIST_VALUE_TYPE_TEMPL.format(
                     idx, self.__data_type)
 
@@ -246,7 +249,8 @@ class DataElement(object):
                     if type(item) not in [int, float]:
                         return MISMATCH_MATRIX_VALUE_TYPE_TEMPL.format(
                             item_idx, row_idx, self.__data_type)
-                elif item is not None and type(item) != self.__data_type.type:
+                elif (item is not None
+                      and not isinstance(item, self.__data_type.type)):
                     return MISMATCH_MATRIX_VALUE_TYPE_TEMPL.format(
                         item_idx, row_idx, self.__data_type)
 
@@ -259,7 +263,7 @@ class DataElement(object):
         str_params = [['name', name], ['title', title],
                       ['description', description]]
         for name, value in str_params:
-            if type(value) != str:
+            if not isinstance(value, str):
                 return NON_STRING_PARAM_TEMPL.format(name)
             if not value:
                 return EMPTY_STRING_PARAM_TEMPL.format(name)
