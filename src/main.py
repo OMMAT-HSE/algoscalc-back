@@ -145,7 +145,7 @@ async def get_algorithm_result(algorithm_name: str, parameters: Parameters) \
     return answer
 
 
-@app.get(ALGORITHMS_ENDPOINT + "/backend_version")
+@app.get("api/backend_version")
 async def get_backend_version():
     """Возвращает версию сборки серверной части
 
