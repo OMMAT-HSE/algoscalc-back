@@ -143,3 +143,19 @@ async def get_algorithm_result(algorithm_name: str, parameters: Parameters) \
         logger.warning(str(error))
         answer.errors = str(error)
     return answer
+
+
+@app.get(ALGORITHMS_ENDPOINT + "/backend_version")
+async def get_backend_version():
+    """Возвращает версию сборки серверной части
+
+    :return: версия сборки серверной части
+    :rtype: str
+    """
+    try:
+        with open(path_config["version_file"], "r") as file:
+            version = file.read().strip()
+        return {"version": version}
+    except FileNotFoundError:
+        return {"error": {"code": 404, "message": "Информация о версии не найдена"}}
+
