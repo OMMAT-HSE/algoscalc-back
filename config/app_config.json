@@ -5,7 +5,7 @@
     "test_file_name": "tests.py",
     "json_schema_file_path": "src/core/schemas/algorithm_schema.json",
     "algorithms_catalog_path": "src/algorithms",
-    "version_file": "/version.txt"
+    "version_file": ".version"
   },
   "algorithm_config": {
     "execute_timeout": 5

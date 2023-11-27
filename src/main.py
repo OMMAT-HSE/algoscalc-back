@@ -4,7 +4,7 @@
 import os
 import json
 import logging.config
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
 from src.core.algorithm_collection import AlgorithmCollection, \
@@ -14,7 +14,7 @@ from src.api_models import AlgorithmTitle, Algorithms, DataDefinition, \
     AnswerAlgorithmDefinition
 from src import APP_CONFIG_FILE_PATH, LOG_CONFIG_FILE_PATH, \
     PATH_CONFIG, ALGORITHM_CONFIG, IS_TEST_APP, EXECUTE_TIMEOUT, \
-    ALGORITHMS_ENDPOINT, TIME_OVER_MSG
+    ALGORITHMS_ENDPOINT, TIME_OVER_MSG, BACKEND_VERSION_ENDPOINT
 
 if os.path.exists('../' + LOG_CONFIG_FILE_PATH):
     os.chdir('..')
@@ -145,7 +145,7 @@ async def get_algorithm_result(algorithm_name: str, parameters: Parameters) \
     return answer
 
 
-@app.get(ALGORITHMS_ENDPOINT + "/backend_version")
+@app.get(BACKEND_VERSION_ENDPOINT)
 async def get_backend_version():
     """Возвращает версию сборки серверной части
 
@@ -153,9 +153,8 @@ async def get_backend_version():
     :rtype: str
     """
     try:
-        with open(path_config["version_file"], "r") as file:
+        with open(path_config['version_file'], 'r') as file:
             version = file.read().strip()
-        return {"version": version}
+        return {'version': version}
     except FileNotFoundError:
-        return {"error": {"code": 404, "message": "Информация о версии не найдена"}}
-
+        raise HTTPException(status_code=404)
