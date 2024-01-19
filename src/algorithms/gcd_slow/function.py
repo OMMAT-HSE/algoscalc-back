@@ -27,11 +27,11 @@ def gcd(a: int, b: int) -> int:
     b = abs(b)
 
     while a*b != 0:
-        if a > b and b !=0:
+        if a > b and b != 0:
             a -= b
         else:
             b -= a
-    return a+b
+    return a + b
 
 
 def main(a: int, b: int) -> dict[str: int, str: float]:
