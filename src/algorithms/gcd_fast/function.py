@@ -26,12 +26,15 @@ def gcd(a: int, b: int) -> int:
     a = abs(a)
     b = abs(b)
 
-    while a*b != 0:
-        if a > b and b !=0:
-            a -= b
-        else:
-            b -= a
-    return a+b
+    # большее значение сохраняем в а
+    if a < b:
+        a, b = b, a
+    # итеративно проходимся по а и b, вычисляем остаток от деления пока меньшее число не равно 0
+    # выводим большее число
+    while a > b and b!= 0:
+        a, b = b, a % b
+
+    return a
 
 
 def main(a: int, b: int) -> dict[str: int, str: float]:
